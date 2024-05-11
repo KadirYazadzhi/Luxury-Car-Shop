@@ -174,7 +174,7 @@ p {
     padding-bottom: 2rem;
   }
   .home__title {
-    top: 22%;
+    top: 18%;
     left: 0;
     right: 0;
     writing-mode: initial;
@@ -182,8 +182,8 @@ p {
     text-align: center;
   }
   .home__img {
-    width: 840px;
-    top: 32%;
+    width: 750px;
+    top: 30%;
     left: 0;
     right: 0;
     margin-left: auto;
@@ -198,7 +198,7 @@ p {
     margin-inline: auto;
   }
 }
-@media screen and (min-width: 1500px) {
+@media screen and (min-width: 1700px) {
   .home {
     grid-template-columns: 700px 420px;
   }
@@ -216,7 +216,7 @@ p {
     width: 220px;
   }
 }
-@media screen and (min-width: 1900px) {
+@media screen and (min-width: 2000px) {
   .home {
     grid-template-columns: 820px 480px;
   }
