@@ -1,0 +1,252 @@
+@import url("https://fonts.googleapis.com/css?family=Montserrat:400,700&display=swap");
+
+:root {
+  --header-height: 3.5rem;
+  --first-color: #ff4aef;
+  --text-color: #494949;
+  --bg-color: #141313;
+  --white-color: #fff;
+  --icon-color: #c50097;
+  --body-font: "Montserrat", sans-serif;
+  --big-font-size: 3rem;
+  --h2-font-size: 1.25rem;
+  --normal-font-size: 0.93rem;
+  --small-font-size: 0.75rem;
+  --smaller-font-size: 0.5rem;
+  --z-normal: 1;
+  --z-fixed: 100;
+}
+@media screen and (min-width: 768px) {
+  :root {
+    --big-font-size: 6rem;
+    --h2-font-size: 1.5rem;
+    --normal-font-size: 1rem;
+  }
+}
+
+body {
+  font-family: var(--body-font);
+}
+
+h1, h2, h3 {
+  margin: 0;
+  font-weight: bold;
+}
+
+
+a {
+  text-decoration: none;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+p {
+  font-size: var(--normal-font-size);
+}
+
+.block {
+  display: block;
+}
+
+.inline {
+  display: inline-block;
+}
+
+.container {
+  max-width: 100%;
+  margin-inline: 1rem;
+}
+
+.grid {
+  display: grid;
+}
+
+
+.show {
+  top: var(--header-height);
+}
+
+.main {
+  height: calc(100vh - var(--header-height));
+  padding-top: 5rem;
+}
+
+.home {
+  position: relative;
+  grid-template-columns: 1fr;
+  row-gap: 2.3rem;
+  height: 100%;
+  align-content: flex-end;
+  overflow: hidden;
+}
+.home__title {
+  position: absolute;
+  top: 2%;
+  font-size: var(--big-font-size);
+  writing-mode: vertical-rl;
+  transform: rotate(180deg);
+  color: var(--text-color);
+}
+.home__img {
+  position: absolute;
+  top: 7%;
+  left: 20%;
+  width: 394px;
+  z-index: var(--z-normal);
+}
+.home__information {
+  padding-left: 4.25rem;
+  padding-right: 2rem;
+  color: var(--text-color);
+}
+.home__subtitle {
+  font-size: var(--h2-font-size);
+  color: var(--first-color);
+}
+
+.icon-box {
+  color: var(--icon-color);
+  font-size: 3rem;
+}
+.icon-box--small {
+  font-size: 1rem;
+}
+
+.box {
+  display: flex;
+  justify-content: center;
+  column-gap: 2rem;
+  padding-bottom: 1rem;
+}
+.box__content {
+  background-color: var(--bg-color);
+  color: var(--text-color);
+  box-shadow: 0px 10px 24px hsla(0, 0%, 0%, 0.6);
+  border-radius: 1rem;
+  text-align: center;
+}
+.box__medium {
+  width: 190px;
+  height: 170px;
+  padding: 1.5rem 0.75rem;
+}
+.box__medium-title {
+  font-size: 3rem;
+  color: var(--white-color);
+}
+.box__medium-description {
+  font-size: var(--normal-font-size);
+  margin-bottom: 0.5rem;
+}
+.box__medium-detail {
+  font-size: var(--small-font-size);
+}
+.box__small {
+  width: 130px;
+  height: 80px;
+  padding: 0.75rem 0;
+  margin-bottom: 0.625rem;
+}
+.box__small-title {
+  font-size: var(--small-font-size);
+  color: var(--white-color);
+}
+.box__small-detail {
+  font-size: var(--smaller-font-size);
+}
+
+@media screen and (min-width: 768px) {
+  body {
+    margin: 0;
+  }
+  .main {
+    height: 100vh;
+    padding: 0;
+  }
+
+  .home {
+    grid-template-columns: 550px 380px;
+    grid-template-rows: 152px;
+    justify-content: center;
+    padding-bottom: 2rem;
+  }
+  .home__title {
+    top: 22%;
+    left: 0;
+    right: 0;
+    writing-mode: initial;
+    transform: initial;
+    text-align: center;
+  }
+  .home__img {
+    width: 840px;
+    top: 32%;
+    left: 0;
+    right: 0;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .home__information {
+    padding: 0;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .container {
+    margin-inline: auto;
+  }
+}
+@media screen and (min-width: 1300px) {
+  .home {
+    grid-template-columns: 700px 420px;
+  }
+  .home__img {
+    width: 1050px;
+    top: 24%;
+  }
+  .home__title {
+    top: 13%;
+  }
+  .box__small {
+    width: 150px;
+  }
+  .box__medium {
+    width: 220px;
+  }
+}
+@media screen and (min-width: 1900px) {
+  .home {
+    grid-template-columns: 820px 480px;
+  }
+  .home__img {
+    width: 1300px;
+    top: 29%;
+  }
+  .box__medium {
+    width: 230px;
+  }
+  .box__small {
+    width: 150px;
+  }
+}
+@media screen and (max-width: 400px) {
+  .home__img {
+    width: 400px;
+    top: 3%;
+  }
+  .home__title {
+    font-size: 2.7rem;
+    top: 0;
+  }
+  .w-\[390px\] {
+    width: 100%;
+  }
+  .w-80 {
+    width: 95%;
+  }
+  .max-lg\:ml-0 {
+    margin-left: 2rem;
+  }
+}

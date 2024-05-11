@@ -1,0 +1,560 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link href="Source%20File/Style/output.css" rel="stylesheet" />
+    <link href="Source%20File/Style/styles-home.css" rel="stylesheet" />
+    <link href="Source%20File/Style/navbar.css" rel="stylesheet" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Exo:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet"/>
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@4.2.0/fonts/remixicon.css" rel="stylesheet"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
+    <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css" />
+
+    <script src="https://unpkg.com/scrollreveal"></script>
+    <title>Elecar</title>
+  </head>
+
+  <body class="bg-body-color">
+  <nav class="nav">
+    <i class="uil uil-bars navOpenBtn"></i>
+    <a href="#" class="logo">CodingLab</a>
+    <ul class="nav-links">
+      <i class="uil uil-times navCloseBtn"></i>
+      <li><a href="#">Home</a></li>
+      <li><a href="#">Services</a></li>
+      <li><a href="#">Products</a></li>
+      <li><a href="#">About Us</a></li>
+      <li><a href="#">Contact Us</a></li>
+    </ul>
+    <i class="uil uil-search search-icon" id="searchIcon"></i>
+    <div class="search-box">
+      <i class="uil uil-search search-icon"></i>
+      <input type="text" placeholder="Search here..." />
+    </div>
+  </nav>
+
+
+    <main class="mx-auto overflow-hidden">
+
+      <section class="main container">
+        <div class="home grid">
+          <h1 class="home__title">LAMBORGHINI</h1>
+
+          <div class="home__img">
+            <img src="Source%20File/Image/lamborghini.png" alt="">
+          </div>
+
+          <div class="home__information">
+            <h2 class="home__subtitle">LAMBORGHINI<br>HURACAN</h2>
+            <p class="home__description">Lorem ipsum dolor sit amet consect  adipiscing elit, commodo tristique id quisque lobortis facilisi feugiat</p>
+          </div>
+
+          <div class="box">
+            <div class="box__content box__medium">
+              <ion-icon name="speedometer-outline" class="icon-box"></ion-icon>
+              <h3 class="box__medium-title inline">2.5</h3>
+              <span class="box__medium-description block">Sec.</span>
+              <span class="box__medium-detail">0-100 km/h</span>
+            </div>
+
+            <div>
+              <div class="box__content box__small">
+                <ion-icon name="trending-up-outline" class="icon-box icon-box--small"></ion-icon>
+                <h3 class="box__small-title inline">325</h3>
+                <span class="box__small-description block">km/h</span>
+                <span class="box__small-detail">Top Speed</span>
+              </div>
+              <div class="box__content box__small">
+                <ion-icon name="car-sport-outline" class="icon-box icon-box--small"></ion-icon>
+                <h3 class="box__small-title inline">8.500</h3>
+                <span class="box__small-description block">r.p.m</span>
+                <span class="box__small-detail">Power</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="about" class="flex justify-center items-center pt-20 mx-auto">
+        <div class="flex max-lg:inline-block items-center">
+          <div class="about-img relative -z-10">
+            <img class="w-[390px] margin-20 rounded-md max-[370px]:w-[290px]" src="Source%20File/Image/car-image-for-about.png" alt=""/>
+            <div class="about-card-box img-box w-[180px] max-[370px]:w-[160px] h-24 absolute backdrop-blur-[20px] bg-[hsl(0, 0%, 100%), .1] rounded-md -bottom-10 right-0 max-[370px]:right-3 text-center p-5 max-[370px]:p-2">
+              <div class="text-white font-medium">2.500+</div>
+              <div class="text-light-color text-smaller-font-size">
+                Supercharges placed along popular routes
+              </div>
+            </div>
+          </div>
+
+          <div class="about-title ml-10 mt-5 max-lg:ml-0 max-lg:mt-24 max-lg:mb-6">
+            <div class="text-white text-h1-f-pc font-semibold">About Us
+            </div>
+
+            <div class="w-80 max-[370px]:w-[250px] h-auto text-light-color mt-5">
+              Our company is a global leader in the luxury car industry. With pride, we offer our clients
+              the most exclusive and thrilling cars from the world's leading brands. With years of experience
+              and uncompromising quality, we create unique automotive experiences for our prestigious clients.
+              Our mission is to provide you not just with a car, but with a luxurious experience that reflects
+              your style and status.
+            </div>
+
+            <button class="rounded-md sp-border px-6 py-3 mt-5 text-normal-font-size text-white bg-first-color">Know more</button>
+
+          </div>
+        </div>
+      </section>
+
+      <section id="popular" class="pt-24 pl-9 pr-9">
+        <h1 class="popular-title text-h1-f-pc font-semibold text-white text-center">Choose Your Luxury Car</h1>
+
+        <div class="swiper popular-section max-w-[900px] h-[400px] mx-auto mt-16 -z-50 overflow-hidden">
+
+          <div class="swiper-wrapper max-w-[850px]">
+
+            <div class="swiper-slide max-w-[290px] max-h-[335px] relative rounded-2xl p-5 grid place-content-center bg-container-color">
+
+              <div class="inline-block">
+                <div class="car-name text-white font-medium text-base">Porsche</div>
+
+                <div class="car-model text-small-font-size text-light-color">Turbo S</div>
+              </div>
+
+              <div class="pt-3 pb-3">
+                <img class="w-[195px] duration-[.3s] hover:translate-y-[-.25rem]" src="Source%20File/Image/popular1.png"/>
+              </div>
+
+              <div class="info-section flex flex-wrap gap-x-4 gap-y-2 pt-4 text-small-font-size text-white">
+                <div>
+                  <i class="ri-speed-up-line"></i> <span>3.7 Sec</span>
+                </div>
+
+                <div>
+                  <i class="ri-funds-box-line"></i> <span>356 Km/h</span>
+                </div>
+
+                <div>
+                  <i class="ri-charging-pile-2-line"></i> <span>Electric</span>
+                </div>
+              </div>
+
+              <h3 class="text-base text-white mt-4 font-medium">$175,900</h3>
+              <div class="absolute right-0 bottom-0 w-12 h-12 rounded-tl-2xl rounded-br-2xl grid place-content-center bg-first-color">
+                <i class="ri-shopping-bag-2-fill text-white"></i>
+              </div>
+            </div>
+
+            <div class="swiper-slide max-w-[290px] max-h-[335px] relative rounded-2xl p-5 grid place-content-center bg-container-color">
+
+              <div class="inline-block">
+                <div class="car-name text-white font-medium text-base">Porsche</div>
+
+                <div class="car-model text-small-font-size text-light-color">Taycan</div>
+              </div>
+
+              <div class="pr-0 pt-3 pb-3">
+                <img class="w-[195px] duration-[.3s] hover:translate-y-[-.25rem]" src="Source%20File/Image/popular2.png"/>
+              </div>
+
+              <div class="info-section flex flex-wrap gap-x-4 gap-y-2 pt-4 text-small-font-size text-white">
+                <div>
+                  <i class="ri-speed-up-line"></i> <span>3.7 Sec</span>
+                </div>
+
+                <div>
+                  <i class="ri-funds-box-line"></i> <span>356 Km/h</span>
+                </div>
+
+                <div>
+                  <i class="ri-charging-pile-2-line"></i> <span>Electric</span>
+                </div>
+              </div>
+
+              <h3 class="text-base text-white mt-4 font-medium">$114,900</h3>
+              <div class="absolute right-0 bottom-0 w-12 h-12 rounded-tl-2xl rounded-br-2xl grid place-content-center bg-first-color">
+                <i class="ri-shopping-bag-2-fill text-white"></i>
+              </div>
+            </div>
+
+            <div class="swiper-slide max-w-[290px] max-h-[335px] relative rounded-2xl p-5 grid place-content-center bg-container-color">
+
+              <div class="inline-block">
+                <div class="car-name text-white font-medium text-base">Porsche</div>
+                <div class="car-model text-small-font-size text-light-color">Turbo S Cross</div>
+              </div>
+
+              <div class="pr-0 pt-3 pb-3">
+                <img class="w-[195px] duration-[.3s] hover:translate-y-[-.25rem]" src="Source%20File/Image/popular3.png"/>
+              </div>
+
+              <div class="info-section flex flex-wrap gap-x-4 gap-y-2 pt-4 text-small-font-size text-white">
+                <div>
+                  <i class="ri-speed-up-line"></i> <span>3.7 Sec</span>
+                </div>
+
+                <div>
+                  <i class="ri-funds-box-line"></i> <span>356 Km/h</span>
+                </div>
+
+                <div>
+                  <i class="ri-charging-pile-2-line"></i> <span>Electric</span>
+                </div>
+              </div>
+
+              <h3 class="text-base text-white mt-4 font-medium">$150,900</h3>
+              <div class="absolute right-0 bottom-0 w-12 h-12 rounded-tl-2xl rounded-br-2xl grid place-content-center bg-first-color">
+                <i class="ri-shopping-bag-2-fill text-white"></i>
+              </div>
+            </div>
+
+            <div class="swiper-slide max-w-[290px] max-h-[335px] relative rounded-2xl p-5 grid place-content-center bg-container-color">
+
+              <div class="inline-block">
+                <div class="car-name text-white font-medium text-base">Porsche</div>
+
+                <div class="car-model text-small-font-size text-light-color">Boxster 718</div>
+              </div>
+
+              <div class="pr-0 pt-3 pb-3">
+                <img class="w-[195px] duration-[.3s] hover:translate-y-[-.25rem]" src="Source%20File/Image/popular4.png"/>
+              </div>
+
+              <div class="info-section flex flex-wrap gap-x-4 gap-y-2 pt-4 text-small-font-size text-white">
+                <div>
+                  <i class="ri-speed-up-line"></i> <span>3.7 Sec</span>
+                </div>
+
+                <div>
+                  <i class="ri-funds-box-line"></i> <span>356 Km/h</span>
+                </div>
+
+                <div>
+                  <i class="ri-charging-pile-2-line"></i> <span>Electric</span>
+                </div>
+              </div>
+
+              <h3 class="text-base text-white mt-4 font-medium">$125,900</h3>
+              <div class="absolute right-0 bottom-0 w-12 h-12 rounded-tl-2xl rounded-br-2xl grid place-content-center bg-first-color">
+                <i class="ri-shopping-bag-2-fill text-white"></i>
+              </div>
+            </div>
+
+            <div class="swiper-slide max-w-[290px] max-h-[335px] relative rounded-2xl p-5 grid place-content-center bg-container-color">
+
+              <div class="inline-block">
+                <div class="car-name text-white font-medium text-base">Porsche</div>
+                <div class="car-model text-small-font-size text-light-color">Cayman</div>
+              </div>
+
+              <div class="pr-0 pt-3 pb-3">
+                <img class="w-[195px] duration-[.3s] hover:translate-y-[-.25rem]" src="Source%20File/Image/popular5.png"/>
+              </div>
+
+              <div class="info-section flex flex-wrap gap-x-4 gap-y-2 pt-4 text-small-font-size text-white">
+                <div>
+                  <i class="ri-speed-up-line"></i> <span>3.7 Sec</span>
+                </div>
+
+                <div>
+                  <i class="ri-funds-box-line"></i> <span>356 Km/h</span>
+                </div>
+
+                <div>
+                  <i class="ri-charging-pile-2-line"></i> <span>Electric</span>
+                </div>
+              </div>
+
+              <h3 class="text-base text-white mt-4 font-medium">$128,900</h3>
+              <div class="absolute right-0 bottom-0 w-12 h-12 rounded-tl-2xl rounded-br-2xl grid place-content-center bg-first-color">
+                <i class="ri-shopping-bag-2-fill text-white"></i>
+              </div>
+            </div>
+          </div>
+          <div class="swiper-pagination"></div>
+        </div>
+      </section>
+
+      <section id="more-features" class="pt-24 w-[368px] max-sm:w-[20rem] h-auto mx-auto">
+        <h1 class="popular-title text-h1-f-pc font-semibold text-white text-center">More Features</h1>
+        <div class="more-features grid place-content-center relative mt-16">
+
+          <div class="mx-auto">
+            <div class="-z-20 absolute left-0">
+              <img class="map-img max-w-[24rem] max-sm:w-[19.5rem]" src="Source%20File/Image/map.svg" alt="map image"/>
+            </div>
+
+            <div class="car-function">
+              <div class="car-img -z-10">
+                <img class="w-44" src="Source%20File/Image/features.png" alt="car image"/>
+              </div>
+
+              <div class="more-car-info">
+                <div class="card-box w-[120px] h-24 absolute backdrop-blur-[20px] bg-[hsl(0, 0%, 100%), .1] rounded-xl top-10 left-4 text-center p-5">
+                  <div class="text-white font-medium">800v</div>
+                  <p class="text-light-color text-smaller-font-size">Turbo<br>Chargin</p>
+                </div>
+
+                <div class="card-box w-[120px] h-24 absolute backdrop-blur-[20px] bg-[hsl(0, 0%, 100%), .1] rounded-xl top-36 right-4 text-center p-5">
+                  <div class="text-white font-medium">350</div>
+                  <p class="text-light-color text-smaller-font-size">Turbo<br>Chargin</p>
+                </div>
+
+                <div class="card-box w-[120px] h-24 absolute backdrop-blur-[20px] bg-[hsl(0, 0%, 100%), .1] rounded-xl top-60 left-6 text-center p-5">
+                  <div class="text-white font-medium">480</div>
+                  <p class="text-light-color text-smaller-font-size">Km <br>Travel</p>
+                </div>
+
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="featured" class="pt-24 mx-auto">
+        <h1 class="feature-title text-h1-f-pc font-semibold text-white text-center">Featured Luxury Cars</h1>
+
+        <div class="featured-luxury-cars mx-auto max-w-[56.5rem] h-auto">
+
+          <div class="car-option flex justify-center items-center gap-5 mt-10">
+            <button data-filter="all">
+              <div class="active-fc car-logo w-14 h-14 grid place-content-center rounded-xl bg-container-color text-white">All</div>
+            </button>
+
+            <button data-filter=".porsche">
+              <div class="car-logo w-14 h-14 grid place-content-center rounded-xl bg-container-color">
+                <img class="w-7" src="Source%20File/Image/logo1.png" alt="logo" />
+              </div>
+            </button>
+
+            <button data-filter=".audi">
+              <div class="car-logo w-14 h-14 grid place-content-center rounded-xl bg-container-color">
+                <img class="w-7" src="Source%20File/Image/logo2.png" alt="logo" />
+              </div>
+            </button>
+
+            <button data-filter=".tesla">
+              <div class="car-logo w-14 h-14 grid place-content-center rounded-xl bg-container-color">
+                <img class="w-7" src="Source%20File/Image/logo3.png" alt="logo" />
+              </div>
+            </button>
+          </div>
+
+          <div class="all-car w-full flex flex-wrap pt-10 justify-center items-center gap-5">
+
+            <div class="cars mix tesla max-w-[250px] max-h-[380px] relative rounded-2xl p-8 grid place-content-center bg-container-color">
+
+              <div class="inline-block">
+                <div class="car-name text-white font-medium text-base">Tesla</div>
+                <div class="car-model text-small-font-size text-light-color">Model X</div>
+              </div>
+
+              <div class="pt-3 pb-3">
+                <img class="w-[195px] duration-[.3s] hover:translate-y-[-.25rem]" src="Source%20File/Image/featured1.png"/>
+              </div>
+
+              <h3 class="text-base text-white mt-4 font-medium">$98,900</h3>
+              <div class="absolute right-0 bottom-0 w-12 h-12 rounded-tl-2xl rounded-br-2xl grid place-content-center bg-first-color">
+                <i class="ri-shopping-bag-2-fill text-white"></i>
+              </div>
+            </div>
+
+            <div class="cars mix tesla max-w-[250px] max-h-[380px] relative rounded-2xl p-8 grid place-content-center bg-container-color">
+
+              <div class="inline-block">
+                <div class="car-name text-white font-medium text-base">Tesla</div>
+                <div class="car-model text-small-font-size text-light-color">Model 3</div>
+              </div>
+
+              <div class="pt-3 pb-3">
+                <img class="w-[195px] duration-[.3s] hover:translate-y-[-.25rem]" src="Source%20File/Image/featured2.png"/>
+              </div>
+
+              <h3 class="text-base text-white mt-4 font-medium">$45,900</h3>
+              <div class="absolute right-0 bottom-0 w-12 h-12 rounded-tl-2xl rounded-br-2xl grid place-content-center bg-first-color">
+                <i class="ri-shopping-bag-2-fill text-white"></i>
+              </div>
+            </div>
+
+            <div class="cars mix audi max-w-[250px] max-h-[380px] relative rounded-2xl p-8 grid place-content-center bg-container-color">
+
+              <div class="inline-block">
+                <div class="car-name text-white font-medium text-base">Audi</div>
+                <div class="car-model text-small-font-size text-light-color">E-tron</div>
+              </div>
+
+              <div class="pt-3 pb-3">
+                <img class="w-[195px] duration-[.3s] hover:translate-y-[-.25rem]" src="Source%20File/Image/featured3.png"/>
+              </div>
+
+              <h3 class="text-base text-white mt-4 font-medium">$98,900</h3>
+              <div class="absolute right-0 bottom-0 w-12 h-12 rounded-tl-2xl rounded-br-2xl grid place-content-center bg-first-color">
+                <i class="ri-shopping-bag-2-fill text-white"></i>
+              </div>
+            </div>
+
+            <div class="cars mix porsche max-w-[250px] max-h-[380px] relative rounded-2xl p-8 grid place-content-center bg-container-color">
+
+              <div class="inline-block">
+                <div class="car-name text-white font-medium text-base">Porsche</div>
+                <div class="car-model text-small-font-size text-light-color">Boxster 987</div>
+              </div>
+
+              <div class="pt-3 pb-3">
+                <img class="w-[195px] duration-[.3s] hover:translate-y-[-.25rem]" src="Source%20File/Image/featured4.png"/>
+              </div>
+
+              <h3 class="text-base text-white mt-4 font-medium">$126,900</h3>
+              <div class="absolute right-0 bottom-0 w-12 h-12 rounded-tl-2xl rounded-br-2xl grid place-content-center bg-first-color">
+                <i class="ri-shopping-bag-2-fill text-white"></i>
+              </div>
+            </div>
+
+            <div class="cars mix porsche max-w-[250px] max-h-[380px] relative rounded-2xl p-8 grid place-content-center bg-container-color">
+
+              <div class="inline-block">
+                <div class="car-name text-white font-medium text-base">Porsche</div>
+                <div class="car-model text-small-font-size text-light-color">Panamera</div>
+              </div>
+
+              <div class="pt-3 pb-3">
+                <img class="w-[195px] duration-[.3s] hover:translate-y-[-.25rem]" src="Source%20File/Image/featured5.png"/>
+              </div>
+
+              <h3 class="text-base text-white mt-4 font-medium">$126,900</h3>
+              <div class="absolute right-0 bottom-0 w-12 h-12 rounded-tl-2xl rounded-br-2xl grid place-content-center bg-first-color">
+                <i class="ri-shopping-bag-2-fill text-white"></i>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="offer" class="pt-24">
+        <div style="background-image: url('Source File/Image/offer-bg.png')" class="offer-img bg-center bg-no-repeat bg-auto h-auto p-14 max-[500px]:p-0 flex flex-wrap justify-evenly items-center max-sm:text-center relative">
+          <div class="car-info max-w-[450px] max-[500px]:p-14">
+            <h1 class="text-white text-h1-f-pc font-semibold">
+              Do You Want To Receive <br />
+              Special Offers?
+            </h1>
+
+            <p class="text-light-white-color pt-7 text-base">
+              the first to receive all the information about our products and
+              new cars by email by subscribing to our mailing list.
+            </p>
+            <button class="w-44 h-14 mt-7 rounded-lg bg-first-color text-white">Subscribe Now</button>
+          </div>
+
+          <div class="car-img max-[960px]:pt-24 overflow-hidden">
+            <img class="max-w-[400px]" src="Source%20File/Image/offer.png" alt="" />
+          </div>
+
+        </div>
+      </section>
+
+      <section id="logos" class="pt-20">
+        <div class="logos flex flex-wrap justify-center items-center gap-5">
+          <div class="w-32 h-32 grid place-content-center rounded-lg">
+            <img class="w-16 grayscale hover:grayscale-0" src="Source%20File/Image/logo1.png" alt=""/>
+          </div>
+
+          <div class="w-32 h-32 grid place-content-center rounded-lg">
+            <img class="w-16 grayscale hover:grayscale-0" src="Source%20File/Image/logo2.png" alt=""/>
+          </div>
+
+          <div class="w-32 h-32 grid place-content-center rounded-lg">
+            <img class="w-16 grayscale hover:grayscale-0" src="Source%20File/Image/logo3.png" alt=""/>
+          </div>
+
+          <div class="w-32 h-32 grid place-content-center rounded-lg">
+            <img class="w-16 grayscale hover:grayscale-0" src="Source%20File/Image/logo4.png" alt=""/>
+          </div>
+
+          <div class="w-32 h-32 grid place-content-center rounded-lg">
+            <img class="w-16 grayscale hover:grayscale-0" src="Source%20File/Image/logo5.png" alt=""/>
+          </div>
+
+          <div class="w-32 h-32 grid place-content-center rounded-lg">
+            <img class="w-16 grayscale hover:grayscale-0" src="Source%20File/Image/logo6.png" alt=""/>
+          </div>
+
+        </div>
+      </section>
+
+      <footer class="pt-20">
+        <div class="flex flex-wrap justify-center w-full items-start mx-auto gap-20 max-md:inline-block max-md:pl-5">
+
+          <div class="flex-col max-sm:p-2">
+            <div class="footer-title flex items-center text-h1-f-pc font-semibold pt-10 text-white">
+              <i class="ri-steering-line"></i> Elecar
+            </div>
+
+            <p class="footer-list text-light-white-color pt-5">
+              We offer the best electric cars of <br />
+              the most recognized brands in <br />
+              the world.
+            </p>
+          </div>
+
+          <div class="pt-10">
+            <div class="footer-title text-h1-f-pc font-semibold text-white">Company</div>
+
+            <ul class="pt-4 footer-list">
+              <li class="text-light-white-color list-none">About</li>
+              <li class="text-light-white-color list-none">Cars</li>
+              <li class="text-light-white-color list-none">History</li>
+              <li class="text-light-white-color list-none">Shop</li>
+            </ul>
+          </div>
+
+          <div class="pt-10">
+            <div class="footer-title text-h1-f-pc font-semibold text-white">Information</div>
+
+            <ul class="pt-4 footer-list">
+              <li class="text-light-white-color list-none">Request a quote</li>
+              <li class="text-light-white-color list-none">Find a dealer</li>
+              <li class="text-light-white-color list-none">Contact us</li>
+              <li class="text-light-white-color list-none">Services</li>
+            </ul>
+          </div>
+
+          <div class="pt-10">
+            <div class="footer-title text-h1-f-pc font-semibold text-white">Follow us</div>
+
+            <ul class="footer-list gap-5 pt-4 flex">
+              <li class="text-light-white-color list-none text-base">
+                <i class="ri-facebook-line"></i>
+              </li>
+              <li class="text-light-white-color list-none text-base">
+                <i class="ri-instagram-line"></i>
+              </li>
+              <li class="text-light-white-color list-none text-base">
+                <i class="ri-twitter-x-line"></i>
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="footer-title text-center text-light-color pt-20 pb-4">
+          <a href=""></a>
+        </div>
+      </footer>
+
+      <a class="scroll-up w-8 h-8 grid place-content-center bg-container-color fixed right-10 -bottom-[50%] rounded-lg ease-in duration-300" href="#">
+        <i class="ri-arrow-up-line text-white"></i>
+      </a>
+    </main>
+  </body>
+
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+  <script type="module" src="https://unpkg.com/ionicons@5.0.0/dist/ionicons/ionicons.esm.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.2.4/gsap.min.js"></script>
+  <script src="Source%20File/JavaScript/navbar.js"></script>
+  <script src="Source%20File/JavaScript/main-home.js"></script>
+
+  <script src="Source%20File/JavaScript/mixitup.min.js"></script>
+  <script src="Source%20File/JavaScript/main.js"></script>
+</html>
