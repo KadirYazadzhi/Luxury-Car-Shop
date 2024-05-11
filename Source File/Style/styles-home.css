@@ -234,7 +234,7 @@ p {
 @media screen and (max-width: 400px) {
   .home__img {
     width: 400px;
-    top: 3%;
+    top: 10%;
   }
   .home__title {
     font-size: 2.7rem;
@@ -248,5 +248,8 @@ p {
   }
   .max-lg\:ml-0 {
     margin-left: 2rem;
+  }
+  .container {
+    margin-inline: 0;
   }
 }
