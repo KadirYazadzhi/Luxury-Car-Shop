@@ -198,7 +198,7 @@ p {
     margin-inline: auto;
   }
 }
-@media screen and (min-width: 1300px) {
+@media screen and (min-width: 1500px) {
   .home {
     grid-template-columns: 700px 420px;
   }
