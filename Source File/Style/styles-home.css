@@ -234,7 +234,7 @@ p {
 @media screen and (max-width: 400px) {
   .home__img {
     width: 400px;
-    top: 10%;
+    top: 5%;
   }
   .home__title {
     font-size: 2.7rem;
