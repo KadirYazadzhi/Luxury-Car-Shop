@@ -55,7 +55,7 @@ This project was built using these technologies:
 
 
 ## ⚙️ Getting Started
-Visit the following link where you will find my portfolio: https://kadiryazadzhi.github.io/portfolio/
+Visit the following link to view website: kadiryazadzhi.github.io/Luxury-Car-Shop/
 
 
 ## 🙏 Show your support
