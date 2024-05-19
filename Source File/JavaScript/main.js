@@ -1,8 +1,7 @@
-
 let swiper = new Swiper(".popular-section", {
   loop: true,
   spaceBetween: 24,
-  slidesPerView: "auto", 
+  slidesPerView: "auto",
   grabCursor: true,
   pagination: {
     el: ".swiper-pagination",
@@ -12,7 +11,7 @@ let swiper = new Swiper(".popular-section", {
   breakpoints: {
     640: {
       slidesPerView: 2,
-      spaceBetween: 16, 
+      spaceBetween: 16,
     },
     768: {
       slidesPerView: 3,
@@ -22,11 +21,12 @@ let swiper = new Swiper(".popular-section", {
       spaceBetween: 20,
     },
     1024: {
-      slidesPerView: 3,
+      slidesPerView: 4,
       spaceBetween: 30,
     },
   },
 });
+
 
 let mixer = mixitup('.all-car', {
   selectors: {
