@@ -407,3 +407,14 @@ p {
 .active {
   color: #f101bc!important;
 }
+.favourite, .info {
+  font-size: 14px;
+  color: white;
+  cursor: pointer;
+  margin-right: 5px;
+}
+.card-icon {
+  right: 3%;
+  position: absolute;
+  float: right;
+}
