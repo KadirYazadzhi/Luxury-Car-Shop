@@ -15,9 +15,14 @@ class ShoppingCart {
         this.subtotal = 0;
         this.cartContent = document.getElementById('cart-content');
         this.subtotalElement = document.getElementById('subtotal');
+        this.formElement = document.getElementById('shopping-cart-section');
         this.renderCart();
         this.updateSubtotal();
     }
+    openForm() {
+        this.formElement.style.display = 'block';
+    }
+
 
     // Добавяне на продукт към количката
     addToCart(product) {
@@ -29,6 +34,7 @@ class ShoppingCart {
         this.updateStorage();
         this.renderCart();
         this.updateSubtotal();
+        this.openForm();
     }
 
     // Премахване на продукт от количката
