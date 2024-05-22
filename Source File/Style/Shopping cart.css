@@ -10,6 +10,11 @@
     justify-content: center;
     align-items: center;
 }
+@media (max-width: 768px) {
+    #shopping-cart-section {
+        overflow: scroll;
+    }
+}
 .fa {
     cursor: pointer;
 }

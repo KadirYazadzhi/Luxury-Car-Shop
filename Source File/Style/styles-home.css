@@ -408,10 +408,12 @@ p {
   color: #f101bc!important;
 }
 .favourite, .info {
-  font-size: 14px;
   color: white;
-  cursor: pointer;
   margin-right: 5px;
+}
+.favourite:hover {
+  transition: 0.4s;
+  color: #fd0000;
 }
 .card-icon {
   right: 3%;

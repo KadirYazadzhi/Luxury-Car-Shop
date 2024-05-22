@@ -36,25 +36,6 @@ class closeShoppingFormWithArrow {
     }
 }
 
-
-class closeShoppingFormWithText {
-    constructor(shoppingCartSectionId, shoppingCartCloseTextId) {
-        this.formElement = document.getElementById(shoppingCartSectionId);
-        this.closeText = document.getElementById(shoppingCartCloseTextId);
-        this.addCloseTextListener();
-    }
-
-    addCloseTextListener() {
-        this.closeText.addEventListener('click', (event) => {
-            event.preventDefault();
-            this.closeForm();
-        });
-    }
-
-    closeForm() {
-        this.formElement.style.display = 'none';
-    }
-}
 const openShoppingSection = new openShoppingForm('shopping-cart-section', 'shopping-cart-icon');
 const closeShoppingSectionWithArrow = new closeShoppingFormWithArrow('shopping-cart-section', 'close-shopping-card-icon');
 const closeShoppingSectionWithText = new closeShoppingFormWithArrow('shopping-cart-section', 'close-shopping-card-text');

@@ -155,3 +155,6 @@
     -ms-transform: rotate(45deg);
     transform: rotate(45deg);
 }
+.specialInput {
+    display: none;
+}
