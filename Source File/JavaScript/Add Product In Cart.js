@@ -1,4 +1,4 @@
-// Продукт клас
+//Class for products details
 class Product {
     constructor(name, model, image, price) {
         this.name = name;
@@ -8,7 +8,9 @@ class Product {
     }
 }
 
-// Количка клас
+/*Shopping cart class, which has the function of adding products to the
+cart by taking their details directly from the items in html
+and do not allow one product add two times in the cart*/
 class ShoppingCart {
     constructor() {
         this.products = JSON.parse(localStorage.getItem('cartProducts')) || [];
@@ -23,8 +25,6 @@ class ShoppingCart {
         this.formElement.style.display = 'block';
     }
 
-
-    // Добавяне на продукт към количката
     addToCart(product) {
         if (this.products.some(p => p.name === product.name)) {
             alert('This product is already in the cart.');
@@ -37,7 +37,6 @@ class ShoppingCart {
         this.openForm();
     }
 
-    // Премахване на продукт от количката
     removeFromCart(index) {
         this.products.splice(index, 1);
         this.updateStorage();
@@ -45,13 +44,11 @@ class ShoppingCart {
         this.updateSubtotal();
     }
 
-    // Обновяване на общата сума
     updateSubtotal() {
         this.subtotal = this.products.reduce((total, product) => total + product.price, 0);
         this.subtotalElement.textContent = `$${this.subtotal.toFixed(2).replace(/\d(?=(\d{3})+\.)/g, '$&,')}`;
     }
 
-    // Визуализиране на количката
     renderCart() {
         this.cartContent.innerHTML = '';
         this.products.forEach((product, index) => {
@@ -128,19 +125,15 @@ class ShoppingCart {
         });
     }
 
-    // Обновяване на съдържанието на localStorage
     updateStorage() {
         localStorage.setItem('cartProducts', JSON.stringify(this.products));
     }
 }
 
-// Инициализация на количката
 const shoppingCart = new ShoppingCart();
 
-// Извличане на всички бутони за добавяне в количката
 const addToCartButtons = document.querySelectorAll('.add-to-cart');
 
-// За всеки бутон добавяне в количката добавяме събитие
 addToCartButtons.forEach((button) => {
     button.addEventListener('click', () => {
         const productElement = button.closest('.swiper-slide');

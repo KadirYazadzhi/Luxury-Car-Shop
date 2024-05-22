@@ -10,6 +10,7 @@
     <link href="Source%20File/Style/navbar.css" rel="stylesheet" />
     <link href="Source%20File/Style/Profile%20and%20Registration.css" rel="stylesheet" />
     <link href="Source%20File/Style/Shopping%20cart.css" rel="stylesheet" />
+    <link href="Source%20File/Style/Favourite.css" rel="stylesheet" />
 
     <link rel="stylesheet" href="//use.fontawesome.com/releases/v5.0.7/css/all.css">
     <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
@@ -32,6 +33,22 @@
 
   <body class="bg-body-color">
 
+  <div id="favourite-section" class="favorite-section-background">
+    <div class="start-favourite-section">
+      <h1 class="title-favourite-section">Favourite Products</h1>
+
+        <div class="favourite-section">
+
+        </div>
+
+      <div class="shopping-section-bottom">
+        <i id="favorite-close-icon" class="fa fa-arrow-left text-sm pr-2"></i>
+        <span id="favorite-close-text" class="continue-shopping-text text-md  font-medium text-blue-500">Continue Shopping</span>
+      </div>
+
+    </div>
+  </div>
+
   <div id="shopping-cart-section" class="h-screen bg-gray-300">
     <div class="py-12">
       <div class="max-w-md mx-auto bg-gray-100 shadow-lg rounded-lg  md:max-w-5xl">
@@ -41,7 +58,7 @@
               <div id="cart" class="col-span-2 p-5">
                 <h1 class="text-xl font-medium">Shopping Cart</h1>
                 <div id="cart-content" class="flex flex-col mt-6">
-                  <!-- Тук ще се поставят продуктите -->
+
                 </div>
                 <div class="bottom-menu flex justify-between items-center mt-6 pt-6 border-t">
                   <div class="flex items-center">
@@ -136,31 +153,37 @@
     <div class="icons">
       <i id="open-button" class="fas fa-solid fa-user"></i>
       <i id="shopping-cart-icon" class="fas fa-shopping-cart"></i>
-      <i class="fas fa-heart"></i>
+      <i id="favourite-icon" class="fas fa-heart"></i>
     </div>
   </nav>
 
  <div id="registration-form" class="registration-box">
    <div class="form-container">
      <a id="close-button" href="#" class="x"></a>
-     <p class="title">Login</p>
+     <p id="titleForm" class="title">Login</p>
      <form class="form">
        <div class="input-group">
          <label for="username">Username</label>
-         <input type="text" name="username" id="username" placeholder="">
+         <input type="text" name="username" id="username" placeholder="Username">
        </div>
+
+       <div id="input-for-email" class="specialInput input-group">
+         <label for="username">Email</label>
+         <input type="text" name="username" id="emailNew" placeholder="Email">
+       </div>
+
        <div class="input-group">
          <label for="password">Password</label>
-         <input type="password" name="password" id="password" placeholder="">
-         <div class="forgot">
+         <input type="password" name="password" id="password" placeholder="Password">
+         <div id="forgot-password"  class="forgot">
            <a rel="noopener noreferrer" href="#">Forgot Password ?</a>
          </div>
        </div>
-       <button class="sign">Sign in</button>
+       <button id="buttonForm" class="sign">Login</button>
      </form>
      <div class="social-message">
        <div class="line"></div>
-       <p class="message">Login with social accounts</p>
+       <p id="messageForm" class="message">Login with social accounts</p>
        <div class="line"></div>
      </div>
      <div class="social-icons">
@@ -180,8 +203,8 @@
          </svg>
        </button>
      </div>
-     <p class="signup">Don't have an account?
-       <a rel="noopener noreferrer" href="#" class="">Sign up</a>
+     <p class="signup"><span id="textInForm">Don't have an account?</span>
+       <a  id="signAndLogInFormText" rel="noopener noreferrer" href="#" class="">Sign up</a>
      </p>
    </div>
  </div>
@@ -296,12 +319,15 @@
                 <div>
                   <i class="ri-speed-up-line"></i> <span>3.4 Sec</span>
                 </div>
+
                 <div>
                   <i class="ri-funds-box-line"></i> <span>320 Km/h</span>
                 </div>
+
                 <div class="card-icon">
                   <i class="favourite fa fa-heart"></i>
                 </div>
+
                 <div>
                   <i class="ri-gas-station-line"></i> <span>Gasoline</span>
                 </div>
@@ -332,6 +358,10 @@
 
                 <div>
                   <i class="ri-funds-box-line"></i> <span>407 Km/h</span>
+                </div>
+
+                <div class="card-icon">
+                  <i class="favourite fa fa-heart"></i>
                 </div>
 
                 <div>
@@ -366,6 +396,10 @@
                   <i class="ri-funds-box-line"></i> <span>350 Km/h</span>
                 </div>
 
+                <div class="card-icon">
+                  <i class="favourite fa fa-heart"></i>
+                </div>
+
                 <div>
                   <i class="ri-gas-station-line"></i> <span>Gasoline</span>
                 </div>
@@ -396,6 +430,10 @@
 
                 <div>
                   <i class="ri-funds-box-line"></i> <span>315 Km/h</span>
+                </div>
+
+                <div class="card-icon">
+                  <i class="favourite fa fa-heart"></i>
                 </div>
 
                 <div>
@@ -430,6 +468,10 @@
                   <i class="ri-funds-box-line"></i> <span>250 Km/h</span>
                 </div>
 
+                <div class="card-icon">
+                  <i class="favourite fa fa-heart"></i>
+                </div>
+
                 <div>
                   <i class="ri-gas-station-line"></i> <span>Gasoline</span>
                 </div>
@@ -460,6 +502,10 @@
 
                 <div>
                   <i class="ri-funds-box-line"></i> <span>310 Km/h</span>
+                </div>
+
+                <div class="card-icon">
+                  <i class="favourite fa fa-heart"></i>
                 </div>
 
                 <div>
@@ -494,6 +540,10 @@
                   <i class="ri-funds-box-line"></i> <span>330 Km/h</span>
                 </div>
 
+                <div class="card-icon">
+                  <i class="favourite fa fa-heart"></i>
+                </div>
+
                 <div>
                   <i class="ri-gas-station-line"></i> <span>Gasoline</span>
                 </div>
@@ -526,6 +576,12 @@
                   <i class="ri-funds-box-line"></i> <span>268 Km/h</span>
                 </div>
 
+                <div class="card-icon">
+                  <i class="favourite fa fa-heart"></i>
+                </div>
+
+                <br>
+
                 <div>
                   <i class="ri-charging-pile-2-line"></i> <span>Electric</span>
                 </div>
@@ -555,6 +611,10 @@
 
                 <div>
                   <i class="ri-funds-box-line"></i> <span>250 Km/h</span>
+                </div>
+
+                <div class="card-icon">
+                  <i class="favourite fa fa-heart"></i>
                 </div>
 
                 <div>
@@ -589,6 +649,10 @@
                   <i class="ri-funds-box-line"></i> <span>285 Km/h</span>
                 </div>
 
+                <div class="card-icon">
+                  <i class="favourite fa fa-heart"></i>
+                </div>
+
                 <div>
                   <i class="ri-gas-station-line"></i> <span>Gasoline</span>
                 </div>
@@ -618,6 +682,10 @@
 
                 <div>
                   <i class="ri-funds-box-line"></i> <span>285 Km/h</span>
+                </div>
+
+                <div class="card-icon">
+                  <i class="favourite fa fa-heart"></i>
                 </div>
 
                 <div>
@@ -651,6 +719,10 @@
                   <i class="ri-funds-box-line"></i> <span>215 Km/h</span>
                 </div>
 
+                <div class="card-icon">
+                  <i class="favourite fa fa-heart"></i>
+                </div>
+
                 <div>
                   <i class="ri-gas-station-line"></i> <span>Gasoline</span>
                 </div>
@@ -680,6 +752,10 @@
 
                 <div>
                   <i class="ri-funds-box-line"></i> <span>261 Km/h</span>
+                </div>
+
+                <div class="card-icon">
+                  <i class="favourite fa fa-heart"></i>
                 </div>
 
                 <div>
@@ -713,6 +789,10 @@
                   <i class="ri-funds-box-line"></i> <span>250 Km/h</span>
                 </div>
 
+                <div class="card-icon">
+                  <i class="favourite fa fa-heart"></i>
+                </div>
+
                 <div>
                   <i class="ri-gas-station-line"></i> <span>Gasoline</span>
                 </div>
@@ -742,6 +822,10 @@
 
                 <div>
                   <i class="ri-funds-box-line"></i> <span>355 Km/h</span>
+                </div>
+
+                <div class="card-icon">
+                  <i class="favourite fa fa-heart"></i>
                 </div>
 
                 <div>
@@ -1039,12 +1123,16 @@
   <script type="module" src="https://unpkg.com/ionicons@5.0.0/dist/ionicons/ionicons.esm.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.2.4/gsap.min.js"></script>
 
+  <script src="Source%20File/JavaScript/Profile.js"></script>
   <script src="Source%20File/JavaScript/Registration.js"></script>
   <script src="Source%20File/JavaScript/Shopping%20Cart%20Input%20Validation.js"></script>
   <script src="Source%20File/JavaScript/navbar.js"></script>
   <script src="Source%20File/JavaScript/Shopping%20cart.js"></script>
   <script src="Source%20File/JavaScript/Add%20Product%20In%20Cart.js"></script>
+  <script src="Source%20File/JavaScript/Favourite.js"></script>
+  <script src="Source%20File/JavaScript/Add%20to%20Favorite.js"></script>
   <script src="Source%20File/JavaScript/main-home.js"></script>
+
 
   <script src="Source%20File/JavaScript/mixitup.min.js"></script>
   <script src="Source%20File/JavaScript/main.js"></script>
