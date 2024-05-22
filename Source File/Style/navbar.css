@@ -163,4 +163,17 @@
         transform: translateX(50%);
         box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
     }
+    .nav .search-icon {
+        position: absolute;
+        right: 6%;
+    }
+    .icons {
+        margin-right: 15%;
+    }
+    .logo {
+        z-index: 999999;
+    }
+    nav .navCloseBtn {
+        z-index: 999999;
+    }
 }
