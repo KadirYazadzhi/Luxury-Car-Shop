@@ -8,3 +8,4 @@ close.addEventListener("click", function() {
 open.addEventListener("click", function() {
     box.style.display = 'flex';
 })
+

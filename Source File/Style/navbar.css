@@ -4,7 +4,7 @@
     left: 0;
     width: 100%;
     background: #000000;
-    padding: 25px 200px;
+    padding: 25px 100px 25px 100px;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
     z-index: 100;
 
@@ -17,12 +17,12 @@
 .nav {
     justify-content: space-between;
 }
-a {
+.nav-links li a {
     color: #fff;
     text-decoration: none;
     transition: all .5s ease-in;
 }
-a:hover {
+.nav-links li a:hover {
     color: #ff7ff3;
 }
 .nav .logo {
@@ -80,7 +80,24 @@ a:hover {
 .nav .navCloseBtn {
     display: none;
 }
-
+.fas {
+    float: right;
+    cursor: pointer;
+    font-size: 20px!important;
+    color: white;
+    margin-right: 10px;
+}
+.icons {
+    padding-left: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    width: 110px;
+    height: 35px;
+    background: rgba(58, 58, 58, 0.4);
+    border-radius: 20px;
+}
 
 /* responsive */
 @media screen and (max-width: 1160px) {
