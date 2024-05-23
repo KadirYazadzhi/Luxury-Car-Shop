@@ -18,6 +18,8 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link id="special-link" rel="stylesheet" href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css">
 
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Outlined" rel="stylesheet"/>
+
 
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -208,6 +210,44 @@
      </p>
    </div>
  </div>
+
+  <div id="profile-form" class="registration-box">
+    <div class="form-container">
+      <a id="close-profile" href="#" class="x"></a>
+      <p class="title">Profile</p>
+      <div class="">
+        <div class="profile-picture-back">
+          <img class="profile-picture" src="Source%20File/Image/profile-picture.jfif">
+          <div class="pencil-container">
+            <i class="pencil fa fa-pencil" aria-hidden="true"></i>
+          </div>
+        </div>
+        <h1 class="username-in-profile" id="username-in-profile"></h1>
+        <p id="profile-sp-code"></p>
+        <ul class="subs-items">
+          <li class="sub-item">
+            <span class="material-icons-outlined"> grid_view </span>
+            <p>Dashboard</p>
+          </li>
+          <li class="sub-item">
+              <span class="material-icons-outlined">
+                format_list_bulleted
+              </span>
+            <p>My Orders</p>
+          </li>
+          <li class="sub-item">
+            <span class="material-icons-outlined"> manage_accounts </span>
+            <p>Update Profile</p>
+          </li>
+          <li class="sub-item">
+            <span class="material-icons-outlined"> logout </span>
+            <p>Logout</p>
+          </li>
+        </ul>
+      </div>
+      <div id="clock-element"></div>
+    </div>
+  </div>
 
 
   <div id="box" class="subscribe-form">
@@ -1132,6 +1172,9 @@
   <script src="Source%20File/JavaScript/Favourite.js"></script>
   <script src="Source%20File/JavaScript/Add%20to%20Favorite.js"></script>
   <script src="Source%20File/JavaScript/main-home.js"></script>
+  <script src="Source%20File/JavaScript/Open%20Profile%20and%20Registration%20Form.js"></script>
+  <script src="Source%20File/JavaScript/Clock%20Element.js"></script>
+
 
 
   <script src="Source%20File/JavaScript/mixitup.min.js"></script>

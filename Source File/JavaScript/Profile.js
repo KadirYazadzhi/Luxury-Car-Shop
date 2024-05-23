@@ -2,6 +2,7 @@ document.addEventListener("DOMContentLoaded", function() {
     class FormHandler {
         constructor() {
             this.initElements();
+            this.checkUserStatus();
             this.addEventListeners();
         }
 
@@ -17,6 +18,7 @@ document.addEventListener("DOMContentLoaded", function() {
             this.emailField = document.getElementById('emailNew');
             this.passwordField = document.getElementById('password');
             this.form = document.querySelector('.form');
+            this.formContainer = document.getElementById('registration-form');
 
             this.validateElements();
         }
@@ -48,6 +50,10 @@ document.addEventListener("DOMContentLoaded", function() {
             }
             if (!this.form) {
                 console.error('Form element not found');
+                return;
+            }
+            if (!this.formContainer) {
+                console.error('Form container element not found');
                 return;
             }
         }
@@ -93,12 +99,14 @@ document.addEventListener("DOMContentLoaded", function() {
             if (this.buttonForm.textContent.trim() === "Sign up") {
                 if (this.validateFormUsernameAndPassword() && this.validateFormEmail()) {
                     console.log('Sign up form submitted successfully!');
+                    this.saveUserData(true);
                 } else {
                     console.error('Sign up form validation failed');
                 }
             } else {
                 if (this.validateFormUsernameAndPassword()) {
                     console.log('Login form submitted successfully!');
+                    this.saveUserData(false);
                 } else {
                     console.error('Login form validation failed');
                 }
@@ -112,12 +120,14 @@ document.addEventListener("DOMContentLoaded", function() {
                 isValid = false;
                 console.error('Invalid username');
                 this.usernameField.placeholder = 'Invalid username';
+                this.usernameField.style.backgroundColor = '#fdd1d1';
             }
 
             if (!this.validatePassword(this.passwordField.value)) {
                 isValid = false;
                 console.error('Invalid password');
                 this.passwordField.placeholder = 'Invalid password';
+                this.passwordField.style.backgroundColor = '#fdd1d1';
             }
 
             return isValid;
@@ -130,6 +140,7 @@ document.addEventListener("DOMContentLoaded", function() {
                 isValid = false;
                 console.error('Invalid email');
                 this.emailField.placeholder = 'Invalid email';
+                this.emailField.style.backgroundColor = '#fdd1d1';
             }
 
             return isValid;
@@ -146,6 +157,35 @@ document.addEventListener("DOMContentLoaded", function() {
 
         validatePassword(password) {
             return password && password.length >= 6;
+        }
+
+        saveUserData(isSignUp) {
+            const username = this.usernameField.value;
+            const password = this.passwordField.value;
+
+            if (isSignUp) {
+                const email = this.emailField.value;
+                localStorage.setItem('username', username);
+                localStorage.setItem('email', email);
+                localStorage.setItem('password', password);
+            } else {
+                localStorage.setItem('username', username);
+                localStorage.setItem('password', password);
+            }
+
+            this.showWelcomeMessage(username);
+        }
+
+        showWelcomeMessage(username) {
+            alert(`Welcome, ${username}!`);
+            this.formContainer.style.display = 'none';
+        }
+
+        checkUserStatus() {
+            const username = localStorage.getItem('username');
+            if (username) {
+                this.showWelcomeMessage(username);
+            }
         }
     }
 

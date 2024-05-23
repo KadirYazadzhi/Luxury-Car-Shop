@@ -1,41 +1,41 @@
-//This code is an object-oriented code that controlling opening and closing for registration form
-class CloseRegistrationForm {
-    constructor(formId, closeButtonId) {
-        this.formElement = document.getElementById(formId);
-        this.closeButton = document.getElementById(closeButtonId);
-        this.addCloseButtonListener();
+document.addEventListener("DOMContentLoaded", function() {
+    class DisplayElement {
+        constructor() {
+            this.initElements();
+            this.displayUsername();
+            this.displaySpecialNumber();
+        }
+
+        initElements() {
+            this.UsernameInProfile = document.getElementById('username-in-profile');
+            this.SpecialNumber = document.getElementById('profile-sp-code');
+        }
+
+        displayUsername() {
+            if (this.UsernameInProfile) {
+                this.UsernameInProfile.innerText = `@` + localStorage.getItem('username');
+            } else {
+                console.error('Element with id "username-in-profile" not found');
+            }
+        }
+
+        displaySpecialNumber() {
+            if (this.SpecialNumber) {
+                let specialCode = localStorage.getItem('specialCode');
+                if (specialCode && specialCode !== '') {
+                    this.SpecialNumber.innerHTML = specialCode;
+                } else {
+                    specialCode = `#${Math.floor(Math.random() * 10000000)}`;
+                    this.SpecialNumber.innerHTML = specialCode;
+                    localStorage.setItem('specialCode', specialCode);
+                }
+            }
+            else {
+                console.error('Element with id "profile-sp-code" not found');
+            }
+        }
     }
 
-    addCloseButtonListener() {
-        this.closeButton.addEventListener('click', (event) => {
-            event.preventDefault();
-            this.closeForm();
-        });
-    }
+    new DisplayElement();
+});
 
-    closeForm() {
-        this.formElement.style.display = 'none';
-    }
-}
-
-class OpenRegistrationForm {
-    constructor(formId, openButtonId) {
-        this.formElement = document.getElementById(formId);
-        this.openButton = document.getElementById(openButtonId);
-        this.addOpenButtonListener();
-    }
-
-    addOpenButtonListener() {
-        this.openButton.addEventListener('click', (event) => {
-            event.preventDefault();
-            this.openForm();
-        })
-    }
-
-    openForm() {
-        this.formElement.style.display = 'flex';
-    }
-}
-
-const closeRegistrationForm = new CloseRegistrationForm('registration-form', 'close-button');
-const openRegistrationForm = new OpenRegistrationForm('registration-form', 'open-button');
