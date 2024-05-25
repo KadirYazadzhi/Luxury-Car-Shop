@@ -7,20 +7,10 @@ class CloseRegistrationForm {
     }
 
     addCloseButtonListener() {
-        if (localStorage.getItem('username') !== '') {
-            if (this.formElement.id === 'profile-form') {
                 this.closeButton.addEventListener('click', (event) => {
                     event.preventDefault();
                     this.closeForm();
-                })
-            }
-        }
-        else {
-            this.closeButton.addEventListener('click', (event) => {
-                event.preventDefault();
-                this.closeForm();
-            });
-        }
+                });
     }
 
     closeForm() {
@@ -29,35 +19,33 @@ class CloseRegistrationForm {
 }
 
 class OpenRegistrationForm {
-    constructor(formId, openButtonId) {
-        this.formElement = document.getElementById(formId);
+    constructor(openButtonId) {
+        this.RegistrationFormElement = document.getElementById('registration-form');
+        this.ProfileFormElement = document.getElementById('profile-form');
         this.openButton = document.getElementById(openButtonId);
         this.addOpenButtonListener();
     }
 
     addOpenButtonListener() {
-        if (localStorage.getItem('username') !== '') {
-            if (this.formElement.id === 'profile-form') {
-                this.openButton.addEventListener('click', (event) => {
-                    event.preventDefault();
-                    this.openForm();
-                })
-            }
-        }
-        else {
-            this.openButton.addEventListener('click', (event) => {
-                event.preventDefault();
-                this.openForm();
-            })
-        }
+        this.openButton.addEventListener('click', (event) => {
+            event.preventDefault();
+            this.openForm();
+        });
     }
 
     openForm() {
-        this.formElement.style.display = 'flex';
+        if (localStorage.getItem('isValidForOpenProfileOrRegistrationForm') === "true") {
+            this.RegistrationFormElement.style.display = 'flex';
+            this.ProfileFormElement.style.display = 'none';
+        }
+        else {
+            this.ProfileFormElement.style.display = 'flex';
+            this.RegistrationFormElement.style.display = 'none';
+        }
     }
 }
 
+
 const closeRegistrationForm = new CloseRegistrationForm('registration-form', 'close-button');
 const closeProfileForm = new CloseRegistrationForm('profile-form', 'close-profile');
-const openRegistrationForm = new OpenRegistrationForm('registration-form', 'open-button');
-const openProfileForm = new OpenRegistrationForm('profile-form', 'open-button');
+const openProfileForm = new OpenRegistrationForm( 'open-button');

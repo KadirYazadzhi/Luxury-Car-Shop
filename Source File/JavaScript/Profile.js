@@ -19,43 +19,10 @@ document.addEventListener("DOMContentLoaded", function() {
             this.passwordField = document.getElementById('password');
             this.form = document.querySelector('.form');
             this.formContainer = document.getElementById('registration-form');
+            this.inputForChangeInformationAboutUsername = document.getElementById('user-info-username');
+            this.inputForChangeInformationAboutPassword = document.getElementById('user-info-password');
+            this.inputForChangeInformationAboutEmail = document.getElementById('user-info-email');
 
-            this.validateElements();
-        }
-
-        validateElements() {
-            if (!this.InputForEmail) {
-                console.error('Element with id "input-for-email" not found');
-                return;
-            }
-            if (!this.SpecialText) {
-                console.error('Element with id "signAndLogInFormText" not found');
-                return;
-            }
-            if (!this.forgotPassword) {
-                console.error('Element with id "forgot-password" not found');
-                return;
-            }
-            if (!this.usernameField) {
-                console.error('Element with id "username" not found');
-                return;
-            }
-            if (!this.emailField) {
-                console.error('Element with id "emailNew" not found');
-                return;
-            }
-            if (!this.passwordField) {
-                console.error('Element with id "password" not found');
-                return;
-            }
-            if (!this.form) {
-                console.error('Form element not found');
-                return;
-            }
-            if (!this.formContainer) {
-                console.error('Form container element not found');
-                return;
-            }
         }
 
         addEventListeners() {
@@ -173,7 +140,21 @@ document.addEventListener("DOMContentLoaded", function() {
                 localStorage.setItem('password', password);
             }
 
+            localStorage.setItem('isValidForOpenProfileOrRegistrationForm', false.toString());
             this.showWelcomeMessage(username);
+        }
+
+        checkWelcomeMessage() {
+            const lastShownTime = localStorage.getItem('lastWelcomeMessageTime');
+            const currentTime = new Date().getTime();
+
+            if (!lastShownTime || currentTime - lastShownTime > 24 * 60 * 60 * 1000) {
+                const username = localStorage.getItem('username');
+                if (username) {
+                    this.showWelcomeMessage(username);
+                    localStorage.setItem('lastWelcomeMessageTime', currentTime);
+                }
+            }
         }
 
         showWelcomeMessage(username) {
@@ -184,13 +165,67 @@ document.addEventListener("DOMContentLoaded", function() {
         checkUserStatus() {
             const username = localStorage.getItem('username');
             if (username) {
-                this.showWelcomeMessage(username);
+                this.checkWelcomeMessage();
             }
+            this.informationAboutProfile();
+        }
+
+        informationAboutProfile() {
+            this.inputForChangeInformationAboutUsername.value = localStorage.getItem('username');
+            this.inputForChangeInformationAboutPassword.value = localStorage.getItem('password');
+
+            if (localStorage.getItem('email') !== null) {
+                this.inputForChangeInformationAboutEmail.value = localStorage.getItem('email');
+            }
+            else {
+                this.inputForChangeInformationAboutEmail.placeholder = "Enter your email";
+            }
+
+        }
+        saveInformationAboutPurchase() {
+            localStorage.getItem('SavedProducts');
+
+        }
+
+    }
+    new FormHandler();
+
+
+    class ProfileChange {
+        constructor(usernameInputId, passwordInputId, emailInputId) {
+            this.usernameInput = document.getElementById(usernameInputId);
+            this.passwordInput = document.getElementById(passwordInputId);
+            this.emailInput = document.getElementById(emailInputId);
+            this.bindEvents();
+        }
+
+        bindEvents() {
+            this.usernameInput.addEventListener('input', () => {
+                const newUsername = this.usernameInput.value.trim();
+                if (newUsername !== localStorage.getItem('username')) {
+                    localStorage.setItem('username', newUsername);
+                }
+            });
+
+            this.passwordInput.addEventListener('input', () => {
+                const newPassword = this.passwordInput.value.trim();
+                if (newPassword !== localStorage.getItem('password')) {
+                    localStorage.setItem('password', newPassword);
+                }
+            });
+
+            this.emailInput.addEventListener('input', () => {
+                const newEmail = this.emailInput.value.trim();
+                if (newEmail !== localStorage.getItem('email')) {
+                    localStorage.setItem('email', newEmail);
+                }
+            });
         }
     }
 
-    new FormHandler();
+    const changeElement = new ProfileChange('user-info-username', 'user-info-password', 'user-info-email');
 });
+
 
 
 

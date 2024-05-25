@@ -127,6 +127,7 @@ class ShoppingCart {
 
     updateStorage() {
         localStorage.setItem('cartProducts', JSON.stringify(this.products));
+        localStorage.setItem('SavedProducts', JSON.stringify(this.products));
     }
 }
 
