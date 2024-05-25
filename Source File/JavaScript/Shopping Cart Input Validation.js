@@ -86,11 +86,16 @@ document.addEventListener("DOMContentLoaded", function() {
         }
 
         saveDataToLocalStorage() {
-            localStorage.setItem('cardName', this.cardNameInput.value);
-            localStorage.setItem('cardNumber', this.cardNumberInput.value);
-            localStorage.setItem('expiryMM', this.expiryMMInput.value);
-            localStorage.setItem('expiryYYYY', this.expiryYYYYInput.value);
-            localStorage.setItem('cvv', this.cvvInput.value);
+            let orders = JSON.parse(localStorage.getItem('orders')) || [];
+            const order = {
+                cardName: this.cardNameInput.value,
+                cardNumber: this.cardNumberInput.value,
+                expiryMM: this.expiryMMInput.value,
+                expiryYYYY: this.expiryYYYYInput.value,
+                cvv: this.cvvInput.value
+            };
+            orders.push(order);
+            localStorage.setItem('orders', JSON.stringify(orders));
         }
 
         deleteAllDataFromCart() {
@@ -107,3 +112,4 @@ document.addEventListener("DOMContentLoaded", function() {
 
     new CreditCard();
 });
+

@@ -235,11 +235,12 @@
               </span>
             <p>My Orders</p>
           </li>
-          <li class="sub-item">
-            <span class="material-icons-outlined"> manage_accounts </span>
-            <p>Update Profile</p>
+          <li class="sub-item" id="openUserInformation">
+            <span id="openUserInformationIcon" class="material-icons-outlined"> manage_accounts </span>
+            <p id="openUserInformationText">Update Profile</p>
           </li>
-          <div class="user-information">
+
+          <div class="user-information" style="display: none;">
             <input id="user-info-username" class="info-input" type="text">
             <input id="user-info-password" class="info-input" type="password">
             <input id="user-info-email" class="info-input" type="email">
@@ -249,6 +250,8 @@
               <button id="submit-button" class="info-button">Submit</button>
             </div>
           </div>
+
+
           <li class="sub-item">
             <span id="LogOutRegistrationFormIcon" class="material-icons-outlined"> logout </span>
             <p id="LogOutRegistrationFormText">Logout</p>
@@ -1184,6 +1187,7 @@
   <script src="Source%20File/JavaScript/main-home.js"></script>
   <script src="Source%20File/JavaScript/Open%20Profile%20and%20Registration%20Form.js"></script>
   <script src="Source%20File/JavaScript/Clock%20Element.js"></script>
+  <script src="Source%20File/JavaScript/Open%20Profile%20Information.js"></script>
 
 
 

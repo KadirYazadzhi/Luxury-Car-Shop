@@ -166,6 +166,15 @@
     padding: 5px;
     margin: 10px;
 }
+@media (max-width: 768px) {
+    .sub-item {
+        justify-content: center;
+    }
+    .user-information {
+        justify-content: center!important;
+        align-items: center;
+    }
+}
 .sub-item p {
     cursor: pointer;
 }
@@ -225,7 +234,7 @@
     margin-bottom: 15px;
 }
 .user-information {
-    display: flex;
+    display: none;
     flex-direction: column;
     position: relative;
     justify-content: left;

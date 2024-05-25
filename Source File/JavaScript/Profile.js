@@ -183,8 +183,8 @@ document.addEventListener("DOMContentLoaded", function() {
 
         }
         saveInformationAboutPurchase() {
-            localStorage.getItem('SavedProducts');
-
+            let index = 0;
+            localStorage.getItem(`SavedProducts - ${index}`);
         }
 
     }
@@ -196,30 +196,56 @@ document.addEventListener("DOMContentLoaded", function() {
             this.usernameInput = document.getElementById(usernameInputId);
             this.passwordInput = document.getElementById(passwordInputId);
             this.emailInput = document.getElementById(emailInputId);
+            this.cancelButton = document.getElementById('cancel-button');
+            this.submitButton = document.getElementById('submit-button');
             this.bindEvents();
+            this.elementToValidate();
         }
 
         bindEvents() {
-            this.usernameInput.addEventListener('input', () => {
-                const newUsername = this.usernameInput.value.trim();
-                if (newUsername !== localStorage.getItem('username')) {
-                    localStorage.setItem('username', newUsername);
-                }
+            this.submitButton.addEventListener('click', () => {
+                this.elementToValidate();
             });
 
-            this.passwordInput.addEventListener('input', () => {
-                const newPassword = this.passwordInput.value.trim();
-                if (newPassword !== localStorage.getItem('password')) {
-                    localStorage.setItem('password', newPassword);
-                }
+            this.cancelButton.addEventListener('click', () => {
+                this.resetFields();
             });
+        }
 
-            this.emailInput.addEventListener('input', () => {
-                const newEmail = this.emailInput.value.trim();
-                if (newEmail !== localStorage.getItem('email')) {
-                    localStorage.setItem('email', newEmail);
+        elementToValidate() {
+            this.handleInputChange(this.usernameInput, 'username');
+            this.handleInputChange(this.passwordInput, 'password');
+            this.handleInputChange(this.emailInput, 'email');
+        }
+
+        handleInputChange(inputElement, type) {
+            const newValue = inputElement.value.trim();
+            const currentValue = localStorage.getItem(type);
+
+            this.validateInput(inputElement, type);
+
+            if (newValue !== currentValue && newValue !== '') {
+                localStorage.setItem(type, newValue);
+            }
+            else {
+                inputElement.value = currentValue;
+            }
+        }
+
+        validateInput(inputElement, type) {
+            inputElement.addEventListener('input', () => {
+                const newValue = inputElement.value.trim();
+
+                if (newValue === '') {
+                    inputElement.placeholder = `Enter ${type}`;
                 }
             });
+        }
+
+        resetFields() {
+            this.usernameInput.value = localStorage.getItem('username');
+            this.passwordInput.value = localStorage.getItem('password');
+            this.emailInput.value = localStorage.getItem('email');
         }
     }
 
