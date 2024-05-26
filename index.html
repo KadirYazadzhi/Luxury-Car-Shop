@@ -18,6 +18,13 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link id="special-link" rel="stylesheet" href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css">
 
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <link id="specialBootstrapLink" rel="stylesheet" href="">
+
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Outlined" rel="stylesheet"/>
 
 
@@ -211,6 +218,100 @@
    </div>
  </div>
 
+<div id="user-orders-detail" class="user-orders-detail">
+  <div class="container">
+    <div class="table-wrapper">
+      <div class="table-title">
+        <div class="row">
+          <div class="col-sm-4">
+            <h2>Order <b>Details</b></h2>
+          </div>
+          <div class="col-sm-8">
+            <a id="exitFromDetails" href="#" class="btn btn-info"><i class="material-icons">&#xE24D;</i> <span>Exit</span></a>
+            <a href="#" class="btn btn-primary"><i class="material-icons">&#xE863;</i> <span>Refresh List</span></a>
+          </div>
+        </div>
+      </div>
+      <div class="table-filter">
+        <div class="row">
+          <div class="col-sm-3">
+            <div class="show-entries">
+              <span>Show</span>
+              <select class="form-control">
+                <option>5</option>
+                <option>10</option>
+                <option>15</option>
+                <option>20</option>
+              </select>
+              <span>entries</span>
+            </div>
+          </div>
+          <div class="col-sm-9">
+            <button type="button" class="btn btn-primary"><i class="fa fa-search"></i></button>
+            <div class="filter-group">
+              <label>Name</label>
+              <input type="text" class="form-control">
+            </div>
+            <div class="filter-group">
+              <label>Location</label>
+              <select class="form-control">
+                <option>All</option>
+                <option>Berlin</option>
+                <option>London</option>
+                <option>Madrid</option>
+                <option>New York</option>
+                <option>Paris</option>
+              </select>
+            </div>
+            <div class="filter-group">
+              <label>Status</label>
+              <select class="form-control">
+                <option>Any</option>
+                <option>Delivered</option>
+                <option>Shipped</option>
+                <option>Pending</option>
+                <option>Cancelled</option>
+              </select>
+            </div>
+            <span class="filter-icon"><i class="fa fa-filter"></i></span>
+          </div>
+        </div>
+      </div>
+      <table class="table table-striped table-hover">
+        <thead>
+        <tr>
+          <th>#</th>
+          <th>Customer</th>
+          <th>Location</th>
+          <th>Order Date</th>
+          <th>Status</th>
+          <th>Net Amount</th>
+          <th>Action</th>
+        </tr>
+        </thead>
+        <tbody>
+
+        </tbody>
+      </table>
+      <div class="clearfix">
+        <div class="hint-text">Showing <b>5</b> out of <b>25</b> entries</div>
+        <ul class="pagination">
+          <li class="page-item disabled"><a href="#">Previous</a></li>
+          <li class="page-item active"><a href="#" class="page-link">1</a></li>
+          <li class="page-item"><a href="#" class="page-link">2</a></li>
+          <li class="page-item"><a href="#" class="page-link">3</a></li>
+          <li class="page-item"><a href="#" class="page-link">4</a></li>
+          <li class="page-item"><a href="#" class="page-link">5</a></li>
+          <li class="page-item"><a href="#" class="page-link">6</a></li>
+          <li class="page-item"><a href="#" class="page-link">7</a></li>
+          <li class="page-item"><a href="#" class="page-link">Next</a></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>
+
+
   <div id="profile-form" class="registration-box">
     <div class="form-container">
       <a id="close-profile" href="#" class="x"></a>
@@ -229,12 +330,12 @@
             <span class="material-icons-outlined"> grid_view </span>
             <p>Dashboard</p>
           </li>
+
           <li class="sub-item">
-              <span class="material-icons-outlined">
-                format_list_bulleted
-              </span>
-            <p>My Orders</p>
+              <span id="openUserOrdersIcon" class="material-icons-outlined">format_list_bulleted</span>
+            <p id="openUserOrdersText">My Orders</p>
           </li>
+
           <li class="sub-item" id="openUserInformation">
             <span id="openUserInformationIcon" class="material-icons-outlined"> manage_accounts </span>
             <p id="openUserInformationText">Update Profile</p>
@@ -1188,6 +1289,7 @@
   <script src="Source%20File/JavaScript/Open%20Profile%20and%20Registration%20Form.js"></script>
   <script src="Source%20File/JavaScript/Clock%20Element.js"></script>
   <script src="Source%20File/JavaScript/Open%20Profile%20Information.js"></script>
+  <script src="Source%20File/JavaScript/Open%20Profile%20Orders.js"></script>
 
 
 
