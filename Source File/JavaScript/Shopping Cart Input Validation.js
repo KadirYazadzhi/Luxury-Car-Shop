@@ -12,7 +12,9 @@ document.addEventListener("DOMContentLoaded", function() {
             this.cardExpiryDisplay = document.querySelector('.card-expiry');
 
             this.CheckOutForProduct = document.getElementById('CheckOutForProduct');
+            this.ordersTable = document.querySelector('.user-orders-detail table tbody');
 
+            this.loadOrdersFromLocalStorage();
             this.initEventListeners();
         }
 
@@ -67,7 +69,9 @@ document.addEventListener("DOMContentLoaded", function() {
             const cvvValid = /^\d{3}$/.test(this.cvvInput.value);
 
             if (cardNameValid && cardNumberValid && expiryMMValid && expiryYYYYValid && cvvValid) {
-                this.saveDataToLocalStorage();
+                const totalAmount = this.getTotalAmountFromCart();
+                this.saveOrderToLocalStorage(totalAmount);
+                this.addOrderToTable(totalAmount);
                 this.clearInputs();
                 this.deleteAllDataFromCart();
                 alert('Purchase successful!');
@@ -85,17 +89,59 @@ document.addEventListener("DOMContentLoaded", function() {
             this.cvvInput.value = '';
         }
 
-        saveDataToLocalStorage() {
+        getTotalAmountFromCart() {
+            const cartProducts = JSON.parse(localStorage.getItem('cartProducts')) || [];
+            return cartProducts.reduce((total, product) => total + product.price, 0);
+        }
+
+        saveOrderToLocalStorage() {
             let orders = JSON.parse(localStorage.getItem('orders')) || [];
+            const totalAmount = shoppingCart.subtotal; // Get total amount from shopping cart
             const order = {
                 cardName: this.cardNameInput.value,
                 cardNumber: this.cardNumberInput.value,
                 expiryMM: this.expiryMMInput.value,
                 expiryYYYY: this.expiryYYYYInput.value,
-                cvv: this.cvvInput.value
+                cvv: this.cvvInput.value,
+                date: new Date().toLocaleDateString(),
+                status: 'Delivered',
+                amount: totalAmount
             };
             orders.push(order);
             localStorage.setItem('orders', JSON.stringify(orders));
+        }
+
+        addOrderToTable(order = null) {
+            if (!order) {
+                order = {
+                    cardName: this.cardNameInput.value,
+                    cardNumber: this.cardNumberInput.value,
+                    expiryMM: this.expiryMMInput.value,
+                    expiryYYYY: this.expiryYYYYInput.value,
+                    date: new Date().toLocaleDateString(),
+                    status: 'Delivered',
+
+                };
+            }
+            const row = document.createElement('tr');
+
+            row.innerHTML = `
+                <td>${this.ordersTable.children.length + 1}</td>
+                <td><a class="avatar-and-name" href="#"><img src="Source%20File/Image/profile-picture.jfif" class="avatar" alt="Avatar">${order.cardName}</a></td>
+                <td>City</td>
+                <td>${order.date}</td>
+                <td><span class="status text-success">&bull;</span> ${order.status}</td>
+                <td class="amount">$${order.amount}</td>
+                <td><a href="#" class="view" title="View Details" data-toggle="tooltip"><i class="material-icons">&#xE5C8;</i></a></td>
+            `;
+            this.ordersTable.appendChild(row);
+        }
+
+        loadOrdersFromLocalStorage() {
+            const orders = JSON.parse(localStorage.getItem('orders')) || [];
+            orders.forEach(order => {
+                this.addOrderToTable(order);
+            });
         }
 
         deleteAllDataFromCart() {
@@ -107,7 +153,6 @@ document.addEventListener("DOMContentLoaded", function() {
                 window.location = 'index.html';
             }, 1000);
         }
-
     }
 
     new CreditCard();
