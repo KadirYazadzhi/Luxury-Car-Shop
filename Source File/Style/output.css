@@ -1017,9 +1017,12 @@ video {
   --tw-bg-opacity: 1;
   background-color: #f101bc;
   cursor: pointer;
+  transition: ease-in-out 0.3s;
+  outline: none;
+  border-color: #f101bc;
 }
 .bg-first-color:hover {
-  border: 3px solid #f101bc;
+  border: 2px solid #f101bc;
   background: none;
   box-shadow: 1px 1px 5px #ff2dd0;
 }
@@ -1259,7 +1262,7 @@ body {
   bottom: 15%;
 }
 .sp-border {
-  border: 3px solid #f101bc;
+  border: 2px solid #f101bc;
 }
 .hover\:translate-y-\[-\.25rem\]:hover {
   --tw-translate-y: -.25rem;

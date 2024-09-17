@@ -48,6 +48,10 @@
     font-size: 20px;
     cursor: pointer;
     float: right;
+    transition: ease-in-out 0.3s;
+}
+.nav .search-icon:hover {
+    color: #ff7ff3;
 }
 .nav .search-box {
     position: absolute;
@@ -91,9 +95,10 @@
     font-size: 20px!important;
     color: white;
     margin-right: 10px;
+    transition: ease-in-out 0.3s;
 }
 .fas:hover {
-    
+    color: #ff7ff3;
 }
 .icons {
     padding-left: 10px;
