@@ -21,3 +21,6 @@
 .continue-shopping-text {
     cursor: pointer;
 }
+.shadow-lg {
+    background-color: #14181f;
+}

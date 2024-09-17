@@ -53,7 +53,7 @@ class ShoppingCart {
         this.cartContent.innerHTML = '';
         this.products.forEach((product, index) => {
             const cartProduct = document.createElement('div');
-            cartProduct.classList.add('flex', 'justify-between', 'items-center', 'mt-6', 'pt-6', 'border-t');
+            cartProduct.classList.add('flex', 'justify-between', 'items-center', 'mt-6', 'pt-6', 'border-t', 'text-white');
 
             const productInfo = document.createElement('div');
             productInfo.classList.add('flex', 'items-center');
@@ -84,7 +84,7 @@ class ShoppingCart {
             productActions.classList.add('flex', 'justify-center', 'items-center');
 
             const quantityControls = document.createElement('div');
-            quantityControls.classList.add('pr-8', 'flex');
+            quantityControls.classList.add('pr-8', 'flex', 'text-gray-700');
 
             const decrementButton = document.createElement('span');
             decrementButton.classList.add('font-semibold');
