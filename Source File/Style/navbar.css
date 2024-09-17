@@ -40,6 +40,9 @@
     opacity: 0;
     pointer-events: none;
 }
+.uil-times {
+    color: red!important;
+}
 .nav .search-icon {
     color: #fff;
     font-size: 20px;
