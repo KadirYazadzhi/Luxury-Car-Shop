@@ -73,11 +73,13 @@
 .search-box input {
     height: 100%;
     width: 100%;
-    border: none;
     outline: none;
     border-radius: 6px;
-    background-color: #fff;
+    border:  1px solid rgba(255, 74, 239, 0.3);
     padding: 0 15px 0 45px;
+    background-color: var(--bg-color);
+    color: #797979;
+    box-shadow: 0px 10px 24px hsla(0, 0%, 0%, 0.6);
 }
 .nav .navOpenBtn,
 .nav .navCloseBtn {
@@ -89,6 +91,9 @@
     font-size: 20px!important;
     color: white;
     margin-right: 10px;
+}
+.fas:hover {
+    
 }
 .icons {
     padding-left: 10px;

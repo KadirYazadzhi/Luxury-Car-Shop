@@ -144,6 +144,9 @@ p {
 .box__medium-detail {
   font-size: var(--small-font-size);
 }
+.box__medium:hover, .box__small:hover {
+  cursor: pointer;
+}
 .box__small {
   width: 130px;
   height: 80px;
