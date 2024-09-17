@@ -300,19 +300,21 @@
     margin: 30px auto;
     border-radius: 10px;
     box-shadow: 0 1px 1px rgba(0,0,0,.05);
+    position: relative;
 }
 .table-wrapper .btn {
     float: right;
-    color: #333;
-    background-color: #fff;
+    color: #858585;
+    background-color: #1d1b1e;
     border-radius: 3px;
     border: none;
     outline: none !important;
     margin-left: 10px;
+    transition: 0.3s;
 }
 .table-wrapper .btn:hover {
-    color: #333;
-    background: #f2f2f2;
+    color: #dadada;
+    background: #3c393d;
 }
 .table-wrapper .btn.btn-primary {
     color: #fff;
@@ -415,7 +417,7 @@ table.table th i {
 }
 table.table td a {
     font-weight: bold;
-    color: #566787;
+    color: #ffffff;
     text-decoration: none;
     display: inline-block;
 }
@@ -474,6 +476,17 @@ table.table .avatar {
     text-align: center;
     padding: 0 6px;
 }
+.pagination>li>a,
+.pagination>li>span {
+    background: #1d1b1e!important;
+    border: 1px solid rgba(255, 74, 239, 0.5) !important;
+    color: white!important;
+    margin-right: 5px!important;
+}
+.pagination>.active>a {
+    background: #29262a !important;
+    border: 1px solid rgba(255, 74, 239, 1) !important;
+}
 .pagination li a:hover {
     color: #666;
 }
@@ -490,9 +503,16 @@ table.table .avatar {
     font-size: 16px;
     padding-top: 6px
 }
+.clearfix {
+    width: 100%;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    padding: 5px 30px;
+}
 .hint-text {
     float: left;
-    margin-top: 10px;
+    margin-top: 25px;
     font-size: 13px;
 }
 .avatar {
